@@ -42,3 +42,6 @@ def kMeans(dataSet, k, distMeas=distEclud, createCent=randCent):
             centroids[cent,:] = mean(ptsInClust, axis=0)
     return centroids, clusterAssment
 
+if __name__ == '__main__':
+    datMat = mat(loadDataSet('testSet.txt'))
+    myCentroids, clustAssing = kMeans(datMat,4)
